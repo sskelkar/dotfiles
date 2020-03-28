@@ -81,3 +81,22 @@ map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 " search for tags from current directory to home directory
 set tags=~/.vim/tags/java
 
+" https://dougblack.io/words/a-good-vimrc.html
+set cursorline          " highlight current line
+set wildmenu            " visual autocomplete for command menu
+set showmatch           " highlight matching [{()}]
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
+
+"autocmd VimEnter * NERDTree " start NERDTree automatically when vim starts
+
+" move to beginning/end of line
+nnoremap B ^
+nnoremap E $
+
+" highlight last inserted text
+nnoremap gV `[v`]
+
+" jk is escape
+inoremap jk <esc>
+set mouse=a "do not select line number during mouse selection
